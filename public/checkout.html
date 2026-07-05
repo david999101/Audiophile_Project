@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout - Audiophile</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container navbar-container">
+        <div
+          class="logo"
+          style="cursor: pointer"
+          onclick="window.location.href = '/'"
+        >
+          audiophile
+        </div>
+        <ul class="nav-links">
+          <li><a href="/">HOME</a></li>
+          <li><a href="/category.html?type=headphones">HEADPHONES</a></li>
+          <li><a href="/category.html?type=speakers">SPEAKERS</a></li>
+          <li><a href="/category.html?type=earphones">EARPHONES</a></li>
+        </ul>
+        <div class="cart-icon">🛒</div>
+      </div>
+    </nav>
+
+    <main class="container checkout-page-container">
+      <a href="/" class="go-back-link">Go Back</a>
+
+      <div class="checkout-layout">
+        <form id="checkout-form" class="checkout-form-card">
+          <h2>CHECKOUT</h2>
+
+          <div class="form-section">
+            <p class="section-title">BILLING DETAILS</p>
+            <div class="input-grid">
+              <div class="input-group">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  required
+                  placeholder="Alexei Ward"
+                />
+              </div>
+              <div class="input-group">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  required
+                  placeholder="alexei@mail.com"
+                />
+              </div>
+              <div class="input-group">
+                <label for="phone">Phone Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  required
+                  placeholder="+1 202-555-0136"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <p class="section-title">SHIPPING INFO</p>
+            <div class="input-grid">
+              <div class="input-group full-width">
+                <label for="address">Address</label>
+                <input
+                  type="text"
+                  id="address"
+                  required
+                  placeholder="1137 Williams Avenue"
+                />
+              </div>
+              <div class="input-group">
+                <label for="zip">ZIP Code</label>
+                <input type="text" id="zip" required placeholder="10001" />
+              </div>
+              <div class="input-group">
+                <label for="city">City</label>
+                <input type="text" id="city" required placeholder="New York" />
+              </div>
+              <div class="input-group">
+                <label for="country">Country</label>
+                <input
+                  type="text"
+                  id="country"
+                  required
+                  placeholder="United States"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <p class="section-title">PAYMENT DETAILS</p>
+            <p style="font-size: 14px; opacity: 0.6; margin-bottom: 16px">
+              💵 Cash on Delivery
+            </p>
+          </div>
+        </form>
+
+        <div class="summary-card">
+          <h6>SUMMARY</h6>
+
+          <div id="summary-items-container"></div>
+
+          <div class="summary-totals">
+            <div class="total-row">
+              <span class="label">TOTAL</span>
+              <span id="summary-total" class="value">$ 0</span>
+            </div>
+            <div class="total-row">
+              <span class="label">SHIPPING</span>
+              <span class="value">$ 50</span>
+            </div>
+            <div class="total-row grand-total-row">
+              <span class="label">GRAND TOTAL</span>
+              <span id="summary-grand-total" class="value-orange">$ 0</span>
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            form="checkout-form"
+            class="btn btn-primary btn-order"
+          >
+            CONTINUE & PAY
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-top">
+          <div class="logo">audiophile</div>
+          <ul class="footer-links">
+            <li><a href="/">HOME</a></li>
+            <li><a href="/category.html?type=headphones">HEADPHONES</a></li>
+            <li><a href="/category.html?type=speakers">SPEAKERS</a></li>
+            <li><a href="/category.html?type=earphones">EARPHONES</a></li>
+          </ul>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-desc">
+            Audiophile is an all-in-one platform to fulfill your audio needs...
+          </p>
+          <div class="footer-meta">
+            <p class="copyright">Copyright 2026. All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <div id="order-success-overlay" class="custom-modal-overlay hide">
+      <div class="custom-modal-content">
+        <div class="success-icon-circle">✓</div>
+        <h2>THANK YOU <br />FOR YOUR ORDER</h2>
+        <p class="success-subtitle">
+          You will receive an email confirmation shortly.
+        </p>
+        <button id="modal-back-home-btn" class="btn btn-primary">
+          BACK TO HOME
+        </button>
+      </div>
+    </div>
+
+    <script src="checkout.js"></script>
+  </body>
+</html>

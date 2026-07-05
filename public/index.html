@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audiophile Ecommerce Website</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container navbar-container">
+        <div class="logo">audiophile</div>
+        <ul class="nav-links">
+          <li><a href="#">HOME</a></li>
+          <li><a href="/category.html?type=headphones">HEADPHONES</a></li>
+          <li><a href="/category.html?type=speakers">SPEAKERS</a></li>
+          <li><a href="/category.html?type=earphones">EARPHONES</a></li>
+        </ul>
+        <div class="cart-icon">🛒</div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <p class="overline">NEW PRODUCT</p>
+          <h1>XX99 MARK II<br />HEADPHONES</h1>
+          <p class="hero-desc">
+            Experience unrivalled sound quality with the professionally
+            redesigned and crafted XX99 Mark II headphones.
+          </p>
+
+          <button
+            class="btn btn-primary"
+            onclick="window.location.href = '/product.html?key=xx99II'"
+          >
+            SEE PRODUCT
+          </button>
+        </div>
+        <div class="hero-image-container">
+          <img
+            src="/assets/xx99II.png"
+            alt="XX99 Mark II Headphones"
+            style="max-width: 100%; height: auto"
+          />
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="categories-section">
+        <div class="category-card">
+          <img
+            src="/assets/xx99II.png"
+            alt="Headphones"
+            style="width: 80px; height: auto; margin-bottom: 10px"
+          />
+          <h6>HEADPHONES</h6>
+          <a href="/category.html?type=headphones" class="shop-link"
+            >SHOP <span class="arrow">›</span></a
+          >
+        </div>
+
+        <div class="category-card">
+          <img
+            src="/assets/zx9.png"
+            alt="Speakers"
+            style="width: 80px; height: auto; margin-bottom: 10px"
+          />
+          <h6>SPEAKERS</h6>
+          <a href="/category.html?type=speakers" class="shop-link"
+            >SHOP <span class="arrow">›</span></a
+          >
+        </div>
+
+        <div class="category-card">
+          <img
+            src="/assets/yx1.png"
+            alt="Earphones"
+            style="width: 80px; height: auto; margin-bottom: 10px"
+          />
+          <h6>EARPHONES</h6>
+          <a href="/category.html?type=earphones" class="shop-link"
+            >SHOP <span class="arrow">›</span></a
+          >
+        </div>
+      </section>
+
+      <section class="products-preview">
+        <div class="speaker-orange-card">
+          <div class="circles-background"></div>
+          <div class="speaker-image-container">
+            <img
+              src="/assets/zx9.png"
+              alt="ZX9 Speaker"
+              style="max-width: 80%; height: auto"
+            />
+          </div>
+          <div class="speaker-content">
+            <h2>ZX9<br />SPEAKER</h2>
+            <p>
+              Upgrade to premium speakers that are phenomenally built to deliver
+              truly remarkable sound.
+            </p>
+
+            <button
+              class="btn btn-black"
+              onclick="window.location.href = '/product.html?key=zx9'"
+            >
+              SEE PRODUCT
+            </button>
+          </div>
+        </div>
+
+        <div class="speaker-gray-card">
+          <div class="speaker-gray-content">
+            <h3>ZX7 SPEAKER</h3>
+
+            <button
+              class="btn btn-outline"
+              onclick="window.location.href = '/product.html?key=zx7'"
+            >
+              SEE PRODUCT
+            </button>
+          </div>
+          <img
+            src="/assets/zx7.png"
+            alt="zx7 Speakers"
+            style="
+              max-width: 100%;
+              max-height: 100%;
+              object-fit: cover;
+              border-radius: 8px;
+            "
+          />
+        </div>
+
+        <div class="earphones-row">
+          <div class="earphones-image-card">
+            <img
+              src="/assets/yx1.png"
+              alt="YX1 Earphones"
+              style="
+                width: 80%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 8px;
+              "
+            />
+          </div>
+          <div class="earphones-text-card">
+            <h3>YX1 EARPHONES</h3>
+
+            <button
+              class="btn btn-outline"
+              onclick="window.location.href = '/product.html?key=yx1'"
+            >
+              SEE PRODUCT
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <div class="about-content">
+          <h2>
+            Bringing you the <span class="highlight">best</span> audio gear
+          </h2>
+          <p>
+            Located at the heart of New York City, Audiophile is the premier
+            store for high-end headphones, earphones, speakers, and audio
+            accessories. We have a large showroom and luxury listening rooms for
+            you to experience a wide range of our products. Stop by our store to
+            meet some of the fantastic people who make Audiophile the best place
+            to buy your portable audio equipment.
+          </p>
+        </div>
+        <div class="about-image-card">
+          <img
+            src="/assets/Bitmap.png"
+            alt="a Person with Headphones"
+            style="
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 8px;
+            "
+          />
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-top">
+          <div class="logo">audiophile</div>
+          <ul class="footer-links">
+            <li><a href="/">HOME</a></li>
+            <li><a href="/category.html?type=headphones">HEADPHONES</a></li>
+            <li><a href="/category.html?type=speakers">SPEAKERS</a></li>
+            <li><a href="/category.html?type=earphones">EARPHONES</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="footer-desc">
+            Audiophile is an all-in-one platform to fulfill your audio needs.
+            We're a small team of music lovers and sound specialists who are
+            devoted to helping you get the most out of personal audio. Come and
+            visit our demo room - we’re open 7 days a week.
+          </p>
+          <div class="footer-meta">
+            <p class="copyright">Copyright 2026. All Rights Reserved</p>
+            <div class="social-icons">
+              <a href="#">📘</a>
+              <a href="#">🐦</a>
+              <a href="#">📸</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div id="cart-modal" class="cart-modal-overlay">
+      <div class="cart-modal-content">
+        <div class="cart-header">
+          <h6>CART (<span id="cart-count">0</span>)</h6>
+          <button id="clear-all-btn">Remove all</button>
+        </div>
+
+        <div id="cart-items-container"></div>
+
+        <div class="cart-total-section">
+          <p class="total-label">TOTAL</p>
+          <p id="cart-total-price" class="total-price">$ 0</p>
+        </div>
+
+        <button
+          class="btn btn-primary btn-checkout"
+          style="width: 100%; margin-top: 24px"
+          onclick="window.location.href = '/checkout'"
+        >
+          CHECKOUT
+        </button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
