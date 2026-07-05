@@ -10,11 +10,10 @@ const orderSchema = new mongoose.Schema({
   country: { type: String, required: true },
   items: [
     {
-      key: String,
-      name: String,
-      price: Number,
-      quantity: Number,
-      emoji: String,
+      id: { type: String, required: true },
+      name: { type: String, required: true },
+      price: { type: Number, required: true },
+      quantity: { type: Number, required: true },
     },
   ],
   totalPrice: { type: Number, required: true },
