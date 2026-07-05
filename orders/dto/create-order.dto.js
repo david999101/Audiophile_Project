@@ -31,7 +31,7 @@ const createOrderDto = z.object({
         name: z.string(),
         price: z.number(),
         quantity: z.number().min(1),
-      })
+      }),
     )
     .min(1, "Cart cannot be empty"),
 });

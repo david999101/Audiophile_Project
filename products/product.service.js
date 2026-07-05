@@ -11,7 +11,7 @@ const ProductService = {
 
   getProductByKey: async (key) => {
     return await Product.findOne({ key: key });
-  }
+  },
 };
 
 module.exports = ProductService;

@@ -46,8 +46,16 @@ checkoutForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   clearErrors();
 
+  const token = localStorage.getItem("authToken");
+
+  if (!token) {
+    alert("Please, sign in or register to place an order");
+    window.location.href = "/signin.html";
+    return;
+  }
+
   if (cart.length === 0) {
-    alert("თქვენი კალათა ცარიელია!");
+    alert("Your cart is empty!");
     return;
   }
 
@@ -80,6 +88,7 @@ checkoutForm.addEventListener("submit", async (e) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify(orderData),
     });
@@ -103,8 +112,8 @@ checkoutForm.addEventListener("submit", async (e) => {
 });
 
 function showValidationErrors(errors) {
-  for (const field in errors) {
-    const inputEl = document.getElementById(field);
+  errors.forEach((issue) => {
+    const inputEl = document.getElementById(issue.field);
 
     if (inputEl) {
       inputEl.classList.add("input-error");
@@ -116,11 +125,11 @@ function showValidationErrors(errors) {
       errorSpan.style.display = "block";
       errorSpan.style.marginTop = "4px";
       errorSpan.style.fontWeight = "500";
-      errorSpan.textContent = errors[field][0];
+      errorSpan.textContent = issue.message;
 
       inputEl.parentNode.appendChild(errorSpan);
     }
-  }
+  });
 }
 
 function clearErrors() {

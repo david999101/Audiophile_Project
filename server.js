@@ -1,11 +1,11 @@
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
 
 const orderRouter = require("./orders/order.controller");
 const productRouter = require("./products/product.controller");
-
-require("dotenv").config();
+const authRouter = require("./auth/auth.controller");
 
 const app = express();
 
@@ -22,6 +22,7 @@ mongoose
 
 app.use("/api/products", productRouter);
 app.use("/api/orders", orderRouter);
+app.use("/api/auth", authRouter);
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
