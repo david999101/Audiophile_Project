@@ -23,7 +23,7 @@ const createOrderDto = z.object({
     .regex(/^[a-zA-Zა-ჰა-ჰწჭხჯჰ\s]+$/, "Country must contain only letters")
     .min(2, "Too short"),
   paymentMethod: z.enum(["e-money", "cash"]),
-  totalPrice: z.number().min(1, "Total price is required"),
+  totalPrice: z.number().optional(),
   items: z
     .array(
       z.object({
